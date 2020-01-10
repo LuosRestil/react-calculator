@@ -19,7 +19,7 @@ class Calculator extends React.Component {
 
   handleNumber(e) {
     // handle numbers too large for display
-    if (this.state.display.length > 10) {
+    if (this.state.display.length > 7) {
       this.setState({
         display: "TOO LARGE",
         input: "",
@@ -192,7 +192,6 @@ class Calculator extends React.Component {
     return (
       <div id="calculator-body">
         <div id="display">{this.state.display}</div>
-        <div id="test-display">{this.state.input}</div>
         <div id="keypad">
           <button
             className="btn btn-danger"

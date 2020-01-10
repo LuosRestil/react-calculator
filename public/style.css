@@ -17,7 +17,8 @@ body {
   background-color: #e0e0e0;
   border-radius: 1rem;
   box-shadow: 0px 10px 10px #333333;
-  width: 25vw;
+  width: 27rem;
+  height: 80vh;
 }
 
 #display {
@@ -28,7 +29,7 @@ body {
   margin-left: 1rem;
   border: 1px solid black;
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 3rem;
   text-align: right;
   font-family: orbitron, sans-serif;
   padding: 0.25rem;
@@ -42,6 +43,7 @@ body {
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 0.25rem;
   overflow: hidden;
+  height: 60%;
 }
 
 .calc-button {
@@ -71,27 +73,50 @@ body {
   text-align: center;
   display: none;
 }
+/*
+@media (max-width: 850px) and (orientation: landscape) {
+  #display {
+    font-size: 1.5rem;
+  }
+  #calculator-body {
+    height: 90%;
+    width: 35vw;
+  }
+  #keypad {
+    margin-top: 1rem;
+  }
+}
+*/
 
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 600px) {
+@media (max-width: 530px) {
   #calculator-body {
     width: 80vw;
-    height: 75vh;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 600px) {
+@media (max-width: 460px) {
+  #calculator-body {
+    height: 70vh;
+  }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-height: 850px) and (orientation: portrait) {
+  #calculator-body {
+    height: 70vh;
+  }
+  #display {
+    font-size: 4rem;
+  }
+  #keypad {
+    margin-top: 4rem;
+  }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-height: 1100px) and (orientation: portrait) {
+  #calculator-body {
+    width: 70vw;
+  }
+  #keypad {
+    margin-top: 6rem;
+  }
 }
