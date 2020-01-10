@@ -19,6 +19,7 @@ body {
   box-shadow: 0px 10px 10px #333333;
   width: 27rem;
   height: 80vh;
+  overflow: hidden;
 }
 
 #display {
@@ -73,8 +74,8 @@ body {
   text-align: center;
   display: none;
 }
-/*
-@media (max-width: 850px) and (orientation: landscape) {
+
+@media (max-height: 600px) and (orientation: landscape) {
   #display {
     font-size: 1.5rem;
   }
@@ -86,9 +87,8 @@ body {
     margin-top: 1rem;
   }
 }
-*/
 
-@media (max-width: 530px) {
+@media (max-width: 530px) and (orientation: portrait) {
   #calculator-body {
     width: 80vw;
   }
@@ -117,6 +117,9 @@ body {
     width: 70vw;
   }
   #keypad {
-    margin-top: 6rem;
+    margin-top: 5rem;
+  }
+  #display {
+    margin-top: 4rem;
   }
 }
